@@ -1,3 +1,4 @@
+@[toc]
 # 前言
 
 本次实验主要针对前馈神经网络，RNN，以及基于注意力机制的网络学习语言建模任务，并在测试集上计算不同语言模型的PPL
@@ -368,34 +369,34 @@ class AttentionModel(nn.Module):
 
 - FFN loss（最小值4.332110404968262）
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/88b6ccc1b9794ec8be3eceb4aa5ecedb.png#pic_center)
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/ad02f035208c4c54934668b9577f1807.png#pic_center)
 
 
 - RNN loss（最小值4.00740385055542）
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/96746f4457cb439aac6e9bee751c82c2.png#pic_center)
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/89fe8f0cc102458995e87712bfc70d99.png#pic_center)
 
 
 - Attention loss（最小值3.7037367820739746）
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/41c117ea280d4c5ba18928a312fd3620.png#pic_center)
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/2842de7f926348e3aadf662d5e9bfb02.png#pic_center)
 
 
 ## 测试集PPL
 
 - FFN（最小值4.401318073272705）
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/f201f524578a45e093227f283f5d7f96.png#pic_center)
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/5f06c77a2c78463a88e354b5f3c67fbd.png#pic_center)
 
 
 - RNN（最小值4.0991902351379395）
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/66282957479043cabfa297b39e72f440.png#pic_center)
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/d162335206d84fddbf19b95bb744f2f4.png#pic_center)
 
 
 - Attention（最小值3.9784348011016846）
 
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/53fab5523cc244ccae89616a082f6274.png#pic_center)
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/9257efa9b5534dd1be1a521b6102a088.png#pic_center)
 
 
 从结果来看，无论是`train loss`, 还是`test ppl`，均有`FFN>RNN>Attention`的关系，且我们看到后两个模型还未完全收敛，性能仍有上升空间。
